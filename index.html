@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>My Player</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='css/main.css'>
+  <link rel='stylesheet' href='css/navbar.css'>
+  <link rel='stylesheet' href='css/playlist.css'>
+</head>
+
+<body>
+  <div class='navbar navbar-expand-lg navbar-light bg-light'>
+    <div id='addButton'>
+      <i class="fas fa-plus-circle"></i> Add new playlist
+    </div>
+    <div id='searchBar'>
+      <i class="fas fa-search"></i>
+      <input type='text' class='form-control' placeholder='Search playlists'>
+    </div>
+    <div class='playBarCtr'>
+      <div class='playBar'>
+        <div class='playDisc'>
+          <div class='far fa-play-circle fa-2x'></div>
+        </div>
+        <audio controls src="">
+          <!-- <source  type="audio/mpeg"> -->
+        </audio>
+        <ul id='thePlayList'>
+        </ul>
+        <i class='fas fa-times fa-2x'></i>
+        <i class='fas fa-pen-square fa-2x'></i>
+      </div>
+    </div>
+  </div>
+
+  <div class='page'>
+
+    <!-- <div class='discctr'>
+      <p class='discName'>Jimmi Hendrix</p>
+      <div class='disc'>
+        <span><i class="fas fa-pencil-alt fa-xs"></i></span>
+        <div class='whiteCircle '><i class="far fa-play-circle fa-2x"></i></div>
+        <i class="fas fa-times-circle"></i>
+      </div>
+    </div> -->
+
+    <!-- <div class='discctr'>
+      <p class='discName'>Jimmi Hendrix Experience</p>
+      <div class='disc'>
+        <div class='whiteCircle'></div>
+      </div>
+    </div>
+
+    <div class='discctr'>
+      <p class='discName'>Jimmi Hendrix</p>
+      <div class='disc'>
+        <div class='whiteCircle'></div>
+      </div>
+    </div>
+
+    <div class='discctr'>
+      <p class='discName'>Jimmi Hendrix</p>
+      <div class='disc'>
+        <div class='whiteCircle'></div>
+      </div>
+    </div> -->
+  </div>
+
+  <div id="editbg">
+    <div id="editctr">
+      <h2> Add New Playlist</h2>
+      <form name="playlistform">
+        <div id='prev-image'></div>
+        <label>Playlist Name</label>
+        <input type="text" class="form-control" name='name' placeholder='e.g. The Beatles'>
+        <label>Playlist Image URL</label>
+        <input type="text" class="form-control" name='image' placeholder='http://'>
+        <button type='button' class='btn next'>Next</button>
+        <button type='button' class='btn reset'>Reset Fields</button>
+      </form>
+    </div>
+    <div id="editctr2">
+      <h2>Add New Playlist</h2>
+      <form name="songsform">
+        <ul id="sortable">
+          <li class="ui-state-default">
+            <span>Song URL:</span>
+            <input class="form-control" name="url" type="url">
+            <span>Name:</span>
+            <input class="form-control" name="name" type="text">
+            <i class="fas fa-trash"></i>
+          </li>
+          <li class="ui-state-default">
+            <span>Song URL:</span>
+            <input class="form-control" name="url" type="url">
+            <span>Name:</span>
+            <input class="form-control" name="name" type="text">
+            <i class="fas fa-trash"></i>
+          </li>
+          <li class="ui-state-default">
+            <span>Song URL:</span>
+            <input class="form-control" name="url" type="url">
+            <span>Name:</span>
+            <input class="form-control" name="name" type="text">
+            <i class="fas fa-trash"></i>
+          </li>
+        </ul>
+        <div id='addSong'>
+          <i class="fas fa-plus-circle"></i> Add another song
+        </div>
+        <button type='button' class='btn submit'>Finish & Save</button>
+      </form>
+    </div>
+    <div id="msgbox">
+    </div>
+  </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.arctext.js"></script>
+<script src="js/model.js"></script>
+<script src="js/playbar.js"></script>
+<script src="js/playlist.js"></script>
+<script src="js/play.js"></script>
+
+</html>

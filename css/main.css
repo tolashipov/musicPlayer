@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+}
+
+/* page-view, when nothing is playing */
+
+.page {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    overflow-y:hidden;
+    max-height: 100vh;
+}
+
+/* page-view, when a playlist is playing, and rotating disc is showing */
+
+.playing {
+    margin-top: 15rem;
+}
+
+/* Add & Edit playlist pages */
+
+#editbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    display: none;
+}
+
+#editctr,
+#editctr2,
+#msgbox {
+    /* position: fixed; */
+    background-color: white;
+    padding: 20px;
+    width: 45vw;
+    margin-top: 10vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+}
+
+#editctr2 {
+    padding-bottom: 5rem;
+}
+
+#editctr>form>input {
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+#editctr>form>#prev-image {
+    background-color: gray;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    display: inline-block;
+    float: right;
+    background-size: cover;
+}
+
+#editctr>form>.btn,
+#editctr2>form>.btn {
+    margin-top: 1.8rem;
+    background-color: #DA5F27;
+    position: relative;
+    bottom: 0px;
+    width: calc(50% - 8rem);
+}
+
+#editctr2>form>#addSong {
+    display: inline-block;
+    float: left;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+#editctr2>form>.btn {
+    float: right;
+}
+
+#msgbox>button{
+    margin:1rem;
+}
+
+/* Sortable li for songs */
+
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#editctr2>form>#sortable>li>input:nth-child(4) {
+    width: 8rem;
+}
+
+#editctr2>form>#sortable>li>input:nth-child(2) {
+    width: 15rem;
+}
+
+#sortable li {
+    margin: 0.1rem 0;
+}
+
+.form-control {
+    display: inline-block;
+}
+
+/* flagging input cells with wrong/no input */
+
+.noinput {
+    border-color: #EC4040;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(226, 49, 49, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(247, 5, 5, 0.6);
+}
+
+/* trash icons properties */
+
+#editctr2>form>#sortable>li>.fa-trash {
+    cursor: pointer;
+    margin-left: 0.1rem;
+    display: none;
+}
+
+#editctr2>form>#sortable>li:hover .fa-trash {
+    display: inline;
+}
+
+#editctr2>form>#sortable>li>.fa-trash:hover {
+    color:#C42525;
+}

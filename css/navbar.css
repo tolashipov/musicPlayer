@@ -1,0 +1,219 @@
+/* navigation bar properties */
+
+.navbar {
+    padding: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+    z-index: 100;
+}
+
+/* nav-bar elements */
+
+.navbar>#searchBar {
+    position: fixed;
+    right: 1rem;
+    ;
+}
+
+.navbar>#addButton {
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.navbar>.addButton>.fa-plus-circle {
+    color: #B3AEAE;
+}
+
+.navbar>#searchBar>.fa-search {
+    position: absolute;
+    padding: 11px;
+    pointer-events: none;
+    right: 0px;
+    color: aliceblue;
+}
+
+.navbar>#searchBar>input {
+    padding-right: 30px;
+    background-color: black;
+    color: aliceblue;
+}
+
+/* 2nd part - when a playlist is playing */
+
+.navbar>.playBarCtr {
+    display: block;
+    position: fixed;
+    margin-top: 7rem;
+    height: 11rem;
+    width: 100%;
+    background-color: white;
+    display: none;
+}
+
+.navbar>.playBarCtr>.playBar {
+    background-color: #DA5F27;
+    width: 50rem;
+    height: 10rem;
+    margin: 0.5rem auto;
+    border-radius: 5rem;
+}
+
+.navbar>.playBarCtr>.playBar>.playDisc {
+    position: relative;
+    top: .3rem;
+    margin-left: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* background-color: blue; */
+    /* background-image: url(../images/hendrix.jpg); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar>.playBarCtr>.playBar>.playDisc>.fa-play-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+
+.navbar>.playBarCtr>.playBar>.playDisc>.fa-pause-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+
+.navbar>.playBarCtr>.playBar>.fas {
+    display: block;
+    position: relative;
+    left: 100%;
+    cursor: pointer;
+    width: 1.7rem;
+}
+
+.navbar>.playBarCtr>.playBar>.fa-times {
+    bottom: 8rem;
+    background-color: #DFDFDF;
+    text-align: center;
+}
+
+.navbar>.playBarCtr>.playBar>.fa-times:hover{
+    background-color: #C42525;
+}
+
+.navbar>.playBarCtr>.playBar>.fa-pen-square {
+    bottom: 6rem;
+}
+
+.navbar>.playBarCtr>.playBar>.fa-pen-square:hover{
+    color: #C42525;
+}
+
+.navbar>.playBarCtr>.playBar>#thePlayList{
+    position:relative;
+    float:right;
+    top:-6rem;
+    right:2rem;
+    overflow-y:scroll;
+    max-height: 6rem;
+}
+.navbar>.playBarCtr>.playBar>#thePlayList>li{
+    list-style: decimal;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.navbar>.playBarCtr>.playBar>#thePlayList>.songBeingPlayed{
+    opacity: 1;
+}
+.navbar>.playBarCtr>.playBar>#thePlayList>li>.beforeli {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+    display:inline-block;
+    position:relative;
+    left: -1rem;
+    top: 3px;
+    display:none;
+}
+
+/* play icon on hovered track */
+
+.navbar>.playBarCtr>.playBar>#thePlayList>li:hover{
+    list-style-type: none;
+}
+.navbar>.playBarCtr>.playBar>#thePlayList>li:hover .beforeli{
+display: inline-block;
+}
+.navbar>.playBarCtr>.playBar>audio{
+    display: inline-block;
+    position:relative;
+    float: right;
+    right: 15.5rem;
+    top:-8.5rem;
+}
+
+/* rotation */
+
+.rotate {
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* reverse rotation - cancels PLAY icon rotation */
+
+.rev-rotate{
+    animation: revSpin 2s infinite linear;
+}
+
+@keyframes revSpin {
+    from {
+        transform: rotate(359deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* ul scrollbar */
+.navbar>.playBarCtr>.playBar>#thePlayList::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+    /* background-color: #FF9633; */
+    background-color: #523621;
+}
+
+.navbar>.playBarCtr>.playBar>#thePlayList::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #523621;
+}
+
+.navbar>.playBarCtr>.playBar>#thePlayList::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #000000;
+    /* background-color: #F90; */
+}

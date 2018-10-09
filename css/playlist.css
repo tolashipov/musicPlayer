@@ -1,0 +1,82 @@
+/* playlist "disc" properties */
+
+.page>.discctr {
+    position: relative;
+    float: left;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page>.discctr>.disc {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    /* background-image: url(); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    opacity: .85;
+}
+
+.page>.discctr>.disc>span,
+.page>.discctr>.disc>.fa-times-circle{
+    margin-top: 1rem;
+    display:none;
+    height:1rem;
+}
+
+.page>.discctr>.disc>.fa-times-circle{
+    color: lightgrey;
+}
+.page>.discctr>.disc>span{
+    background-color: lightgrey;
+    border-radius:50%;
+    height:1rem;
+    width:1rem;
+    justify-content: center;
+}
+.page>.discctr>.disc>span>i{
+    align-self: center;
+}
+.page>.discctr>.disc>.fa-times-circle:hover{
+    color:#C42525;
+}
+.page>.discctr>.disc>span:hover{
+    background-color:#C42525;
+}
+
+.page>.discctr>.discName {
+    position: relative;
+    margin-bottom: 0;
+    opacity: .85;
+}
+
+.page>.discctr>.disc>.whiteCircle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    align-self: center;
+}
+.page>.discctr>.disc>.whiteCircle>i{
+    display:none;
+}
+
+/* disc hover effect */
+
+.page>.discctr:hover .disc,
+.page>.discctr:hover .discName {
+    opacity: 1;
+}
+
+.page>.discctr:hover .disc>.fa-times-circle,
+.page>.discctr:hover .whiteCircle>i,
+.page>.discctr:hover .disc>span{
+    display:flex;
+}
